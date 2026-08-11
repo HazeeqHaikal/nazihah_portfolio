@@ -121,35 +121,16 @@
             box-shadow: 0 0 0 4px #FBE4DC;
         }
 
-        /* Fixed mobile tab bar wrapper — anchored from the TOP of the small/dynamic
-           viewport (100dvh) rather than `bottom:0`. iOS Safari's collapsing address
-           bar makes `position:fixed; bottom:0` unreliable: it can anchor to the
-           larger "layout viewport" and render the bar below the visible fold until
-           the browser chrome settles. Anchoring via 100dvh + a negative translateY
-           guarantees the bar stays inside the visible area. `bottom:0` is kept as a
-           fallback for browsers without dvh support. */
-        .tabbar-wrap {
-            position: fixed;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: 50;
-            display: flex;
-            justify-content: center;
-            padding: 0 1rem 0.75rem;
-            pointer-events: none;
-        }
-        @supports (top: 100dvh) {
-            .tabbar-wrap {
-                bottom: auto;
-                top: 100dvh;
-                padding-bottom: 0;
-                transform: translateY(calc(-100% - 0.75rem));
-            }
-        }
-
-        /* Apple-style bottom tab bar */
+        /* Apple-style bottom tab bar — single fixed element, centered directly.
+           No wrapper, no dvh tricks: just position:fixed + left:50% + translateX,
+           the standard, battle-tested pattern for a mobile bottom nav. */
         .tabbar {
+            position: fixed;
+            left: 50%;
+            bottom: 0.75rem;
+            transform: translateX(-50%);
+            z-index: 50;
+            max-width: calc(100vw - 2rem);
             padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
         }
         .tab-item {
@@ -190,32 +171,30 @@
     </div>
 
     <!-- Tab bar (mobile, Apple-style floating bottom nav) -->
-    <div class="tabbar-wrap sm:hidden">
-        <nav class="tabbar pointer-events-auto bg-white/80 backdrop-blur-xl px-2 pt-2 rounded-[1.6rem] border border-cream-300/80 shadow-soft">
-            <ul class="flex items-center gap-1" id="tabbar-list">
-                <li><a href="#home" data-tab="home" class="tab-item active">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 9.5V20h13V9.5"/></svg>
-                    <span>Home</span>
-                </a></li>
-                <li><a href="#experience" data-tab="experience" class="tab-item">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
-                    <span>Work</span>
-                </a></li>
-                <li><a href="#skills" data-tab="skills" class="tab-item">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M3 12h3M18 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/><circle cx="12" cy="12" r="3.2"/></svg>
-                    <span>Skills</span>
-                </a></li>
-                <li><a href="#education" data-tab="education" class="tab-item">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5 12 5l10 4.5-10 4.5-10-4.5Z"/><path d="M6 11.5V16c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5v-4.5"/></svg>
-                    <span>Edu</span>
-                </a></li>
-                <li><a href="#contact" data-tab="contact" class="tab-item">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg>
-                    <span>Contact</span>
-                </a></li>
-            </ul>
-        </nav>
-    </div>
+    <nav class="tabbar sm:hidden bg-white/80 backdrop-blur-xl px-2 pt-2 rounded-[1.6rem] border border-cream-300/80 shadow-soft">
+        <ul class="flex items-center gap-1" id="tabbar-list">
+            <li><a href="#home" data-tab="home" class="tab-item active">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 9.5V20h13V9.5"/></svg>
+                <span>Home</span>
+            </a></li>
+            <li><a href="#experience" data-tab="experience" class="tab-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+                <span>Work</span>
+            </a></li>
+            <li><a href="#skills" data-tab="skills" class="tab-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M3 12h3M18 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/><circle cx="12" cy="12" r="3.2"/></svg>
+                <span>Skills</span>
+            </a></li>
+            <li><a href="#education" data-tab="education" class="tab-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5 12 5l10 4.5-10 4.5-10-4.5Z"/><path d="M6 11.5V16c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5v-4.5"/></svg>
+                <span>Edu</span>
+            </a></li>
+            <li><a href="#contact" data-tab="contact" class="tab-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg>
+                <span>Contact</span>
+            </a></li>
+        </ul>
+    </nav>
 
     <main class="relative z-10 max-w-6xl mx-auto px-5 sm:px-8 pt-10 sm:pt-32 pb-28 sm:pb-0">
 
@@ -477,6 +456,30 @@
             }, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
 
             sections.forEach(sec => observer.observe(sec));
+        })();
+
+        // Keep the mobile tab bar pinned to the true visible bottom edge.
+        // `position:fixed; bottom:0` is computed against the browser's *layout*
+        // viewport (`window.innerHeight`), which on mobile can momentarily (or,
+        // in some engines, persistently) differ from the actual visible area —
+        // e.g. iOS Safari's collapsing address bar. `visualViewport` is the API
+        // built specifically to report the real visible size, so we use it to
+        // correct the bar's offset directly instead of trusting native `fixed`.
+        (function () {
+            const nav = document.querySelector('.tabbar');
+            if (!nav || !window.visualViewport) return;
+
+            const GAP = 12; // px, matches the 0.75rem gap from the viewport edge
+
+            function reposition() {
+                const vv = window.visualViewport;
+                const hiddenBelow = window.innerHeight - (vv.height + vv.offsetTop);
+                nav.style.bottom = (GAP + Math.max(0, hiddenBelow)) + 'px';
+            }
+
+            window.visualViewport.addEventListener('resize', reposition);
+            window.visualViewport.addEventListener('scroll', reposition);
+            reposition();
         })();
     </script>
 </body>
