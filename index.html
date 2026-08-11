@@ -2,229 +2,420 @@
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nur Nazihah Nabila - Portfolio</title>
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Nur Nazihah Nabila | HR Professional Portfolio</title>
+    <meta name="description" content="Nur Nazihah Nabila Binti Roslan — Human Resource Management student and HR intern at Jabatan Pengairan dan Saliran (JPS) Negeri Perlis. Portfolio, experience, and skills.">
+    <meta name="author" content="Nur Nazihah Nabila Binti Roslan">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.nazihah.site/">
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="Nur Nazihah Nabila — Portfolio">
+    <meta property="og:title" content="Nur Nazihah Nabila | HR Professional Portfolio">
+    <meta property="og:description" content="Human Resource Management student based in Kangar, Perlis. Focused on HR operations, HRIS &amp; compensation.">
+    <meta property="og:image" content="https://www.nazihah.site/assets/profile.jpg">
+    <meta property="og:image:width" content="900">
+    <meta property="og:image:height" content="900">
+    <meta property="og:url" content="https://www.nazihah.site/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_MY">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nur Nazihah Nabila | HR Professional Portfolio">
+    <meta name="twitter:description" content="Human Resource Management student based in Kangar, Perlis. Focused on HR operations, HRIS &amp; compensation.">
+    <meta name="twitter:image" content="https://www.nazihah.site/assets/profile.jpg">
+
+    <meta name="theme-color" content="#FBF6EF" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#F6ECE8" media="(prefers-color-scheme: dark)">
+
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%23D98C77'/%3E%3Ctext x='50' y='66' font-size='54' text-anchor='middle' fill='white' font-family='Georgia,serif'%3EN%3C/text%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23D98C77'/%3E%3Ctext x='50' y='68' font-size='54' text-anchor='middle' fill='white' font-family='Georgia,serif'%3EN%3C/text%3E%3C/svg%3E">
+
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        beige: {
-                            50: '#FDFBF7',  // Main background
-                            100: '#F5F2EB', // Secondary background
-                            200: '#EBE5DA', // Borders/Accents
-                            300: '#D6CFC4',
-                            800: '#5C554B', // Text
-                            900: '#423D33', // Headings
+                        cream: {
+                            50: '#FFFDFB',
+                            100: '#FBF6EF',
+                            200: '#F3E9DD',
+                            300: '#E7D8C4',
+                        },
+                        rose: {
+                            50: '#FDF3F0',
+                            100: '#FBE4DC',
+                            200: '#F5C9BB',
+                            300: '#ECA791',
+                            400: '#DE8770',
+                            500: '#C96C54',
+                            600: '#A6543F',
+                        },
+                        sage: {
+                            50: '#F4F7F0',
+                            100: '#E5EDDC',
+                            200: '#CCDCBD',
+                            300: '#AEC998',
+                            400: '#8FB275',
+                            500: '#729657',
+                        },
+                        ink: {
+                            900: '#2C2621',
+                            800: '#3D352D',
+                            700: '#544A3F',
+                            500: '#7C7266',
+                            400: '#A79C8C',
                         }
                     },
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'], // Optional for headings
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['Fraunces', 'serif'],
+                    },
+                    boxShadow: {
+                        soft: '0 20px 60px -20px rgba(166, 84, 63, 0.18)',
+                        card: '0 10px 30px -12px rgba(44, 38, 33, 0.10)',
                     }
                 }
             }
         }
     </script>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
 
     <style>
-        /* Hide scrollbar for clean look but allow scrolling */
-        body::-webkit-scrollbar {
-            width: 8px;
+        body::-webkit-scrollbar { width: 10px; }
+        body::-webkit-scrollbar-track { background: #FBF6EF; }
+        body::-webkit-scrollbar-thumb { background-color: #E7D8C4; border-radius: 20px; }
+
+        .blob {
+            position: absolute;
+            border-radius: 999px;
+            filter: blur(70px);
+            z-index: 0;
+            pointer-events: none;
         }
-        body::-webkit-scrollbar-track {
-            background: #FDFBF7;
+
+        .chip {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.4rem 0.9rem;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            line-height: 1.1;
         }
-        body::-webkit-scrollbar-thumb {
-            background-color: #D6CFC4;
-            border-radius: 20px;
+
+        .timeline-dot::before {
+            content: '';
+            position: absolute;
+            left: -1.55rem;
+            top: 0.35rem;
+            width: 0.65rem;
+            height: 0.65rem;
+            border-radius: 999px;
+            background: #DE8770;
+            box-shadow: 0 0 0 4px #FBE4DC;
         }
+
+        /* Apple-style bottom tab bar */
+        .tabbar {
+            padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
+        }
+        .tab-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.15rem;
+            width: 3.4rem;
+            padding: 0.4rem 0 0.35rem;
+            border-radius: 1.1rem;
+            color: #A79C8C;
+            transition: color 0.2s ease, background-color 0.2s ease;
+        }
+        .tab-item svg { width: 1.3rem; height: 1.3rem; }
+        .tab-item span { font-size: 0.63rem; font-weight: 600; letter-spacing: 0.01em; }
+        .tab-item.active { color: #C96C54; background: #FBE4DC; }
     </style>
 </head>
-<body class="bg-beige-50 text-beige-800 font-sans selection:bg-beige-200 selection:text-beige-900 overflow-x-hidden">
+<body class="bg-cream-50 text-ink-800 font-sans selection:bg-rose-200 selection:text-rose-600 overflow-x-hidden">
 
-    <nav class="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 bg-beige-100/80 backdrop-blur-md px-6 py-3 rounded-full border border-beige-200 shadow-sm" data-aos="fade-down" data-aos-duration="1000">
-        <ul class="flex justify-center space-x-4 sm:space-x-8 text-sm font-medium tracking-wide whitespace-nowrap">
-            <li><a href="#home" class="hover:text-black transition-colors">Home</a></li>
-            <li><a href="#work" class="hover:text-black transition-colors">Work</a></li>
-            <li><a href="#about" class="hover:text-black transition-colors">About</a></li>
+    <!-- Decorative background blobs -->
+    <div class="blob bg-rose-200/50 w-[28rem] h-[28rem] -top-40 -right-32"></div>
+    <div class="blob bg-sage-200/50 w-[24rem] h-[24rem] top-[70vh] -left-40"></div>
+    <div class="blob bg-rose-100/60 w-[22rem] h-[22rem] top-[140vh] right-0"></div>
+
+    <!-- Nav (desktop) -->
+    <nav class="hidden sm:block fixed top-5 left-1/2 -translate-x-1/2 z-50 bg-white/70 backdrop-blur-md px-2 py-2 rounded-full border border-cream-300/80 shadow-card">
+        <ul class="flex items-center space-x-2 text-sm font-medium tracking-wide whitespace-nowrap">
+            <li><a href="#home" class="block px-4 py-2 rounded-full hover:bg-rose-50 hover:text-rose-500 transition-colors">Home</a></li>
+            <li><a href="#experience" class="block px-4 py-2 rounded-full hover:bg-rose-50 hover:text-rose-500 transition-colors">Experience</a></li>
+            <li><a href="#skills" class="block px-4 py-2 rounded-full hover:bg-rose-50 hover:text-rose-500 transition-colors">Skills</a></li>
+            <li><a href="#education" class="block px-4 py-2 rounded-full hover:bg-rose-50 hover:text-rose-500 transition-colors">Education</a></li>
+            <li><a href="#contact" class="block px-4 py-2 rounded-full bg-rose-400 text-white hover:bg-rose-500 transition-colors">Contact</a></li>
         </ul>
     </nav>
 
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20" id="home">
-        
-        <header class="mb-16 text-center lg:text-left lg:flex lg:items-end lg:justify-between" data-aos="fade-up">
-            <div>
-                <p class="text-sm uppercase tracking-widest text-beige-800 mb-2">Portfolio 2025</p>
-                <h1 class="text-5xl md:text-7xl font-serif text-beige-900">
-                    Nur Nazihah Nabila
+    <!-- Tab bar (mobile, Apple-style floating bottom nav) -->
+    <nav class="tabbar sm:hidden fixed bottom-3 left-1/2 -translate-x-1/2 z-50 bg-white/80 backdrop-blur-xl px-2 pt-2 rounded-[1.6rem] border border-cream-300/80 shadow-soft">
+        <ul class="flex items-center gap-1" id="tabbar-list">
+            <li><a href="#home" data-tab="home" class="tab-item active">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 9.5V20h13V9.5"/></svg>
+                <span>Home</span>
+            </a></li>
+            <li><a href="#experience" data-tab="experience" class="tab-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+                <span>Work</span>
+            </a></li>
+            <li><a href="#skills" data-tab="skills" class="tab-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M3 12h3M18 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/><circle cx="12" cy="12" r="3.2"/></svg>
+                <span>Skills</span>
+            </a></li>
+            <li><a href="#education" data-tab="education" class="tab-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5 12 5l10 4.5-10 4.5-10-4.5Z"/><path d="M6 11.5V16c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5v-4.5"/></svg>
+                <span>Edu</span>
+            </a></li>
+            <li><a href="#contact" data-tab="contact" class="tab-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg>
+                <span>Contact</span>
+            </a></li>
+        </ul>
+    </nav>
+
+    <main class="relative z-10 max-w-6xl mx-auto px-5 sm:px-8 pt-10 sm:pt-32 pb-28 sm:pb-0">
+
+        <!-- Hero -->
+        <section id="home" class="grid md:grid-cols-5 gap-8 md:gap-8 items-center pb-16 sm:pb-24 md:pb-32">
+            <div class="md:col-span-3 order-2 md:order-1" data-aos="fade-up" data-aos-duration="800">
+                <p class="chip bg-sage-100 text-sage-500 mb-4 sm:mb-5">🌿 Open to HR &amp; Admin opportunities</p>
+                <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl leading-[1.1] sm:leading-[1.05] text-ink-900">
+                    Nur Nazihah<br><span class="text-rose-400 italic">Nabila</span> Roslan
                 </h1>
-                <p class="text-xl md:text-2xl text-beige-700 mt-2">Binti Roslan</p>
-            </div>
-            <div class="mt-6 lg:mt-0 max-w-md text-beige-800/80">
-                <p>Dedicated Human Resource Management professional based in Kangar, Perlis. Strong skills in communication, teamwork, and problem-solving with high ethical standards and adaptability.</p>
-            </div>
-        </header>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 grid-rows-auto gap-4 md:gap-6 h-auto">
-
-            <div class="col-span-1 md:col-span-2 lg:row-span-2 bg-beige-100 rounded-3xl p-8 flex flex-col justify-between relative overflow-hidden group border border-beige-200" id="work" data-aos="fade-up" data-aos-delay="100">
-                <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                    <svg width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-                </div>
-                <div class="z-10">
-                    <h2 class="text-2xl font-serif mb-4">Work Experience</h2>
-                    <h3 class="font-semibold text-lg mb-2">E-Commerce Dropship Agent</h3>
-                    <p class="text-sm text-beige-700 mb-3">NIMS Adellicious Sdn Bhd · March 2022 - August 2022</p>
-                    <ul class="space-y-2 text-sm opacity-80">
-                        <li class="flex items-start"><span class="w-1.5 h-1.5 bg-beige-800 rounded-full mr-2 mt-1.5 flex-shrink-0"></span>Handled online customer inquiries, orders, and follow-ups to ensure smooth and timely transactions</li>
-                        <li class="flex items-start"><span class="w-1.5 h-1.5 bg-beige-800 rounded-full mr-2 mt-1.5 flex-shrink-0"></span>Promoted products through social media platforms to increase online visibility and sales engagement</li>
-                        <li class="flex items-start"><span class="w-1.5 h-1.5 bg-beige-800 rounded-full mr-2 mt-1.5 flex-shrink-0"></span>Processed customer orders accurately and coordinated delivery arrangements with suppliers</li>
-                        <li class="flex items-start"><span class="w-1.5 h-1.5 bg-beige-800 rounded-full mr-2 mt-1.5 flex-shrink-0"></span>Updated and maintained sales records while monitoring product availability</li>
-                    </ul>
+                <p class="mt-5 sm:mt-6 text-base sm:text-lg text-ink-700 max-w-xl leading-relaxed">
+                    Detail-oriented Human Resource Management student turning public-sector operations
+                    experience into a career built on HRIS, compensation, and strategic HR operations.
+                </p>
+                <div class="mt-7 sm:mt-8 flex flex-wrap items-center gap-3">
+                    <a href="mailto:nazihahroslan267@gmail.com" class="inline-flex items-center gap-2 bg-ink-900 text-cream-50 px-6 py-3 rounded-full text-sm font-semibold hover:bg-rose-500 transition-colors shadow-soft">
+                        Email Me
+                    </a>
+                    <a href="https://linkedin.com/in/nazihah-roslan-89b849402" target="_blank" rel="noopener" class="inline-flex items-center gap-2 border border-ink-900/15 bg-white px-6 py-3 rounded-full text-sm font-semibold text-ink-800 hover:border-rose-300 hover:text-rose-500 transition-colors">
+                        LinkedIn
+                    </a>
+                    <span class="text-sm text-ink-500 pl-1">📍 Kangar, Perlis, Malaysia</span>
                 </div>
             </div>
 
-            <div class="bg-white rounded-3xl p-6 border border-beige-200 flex flex-col justify-center hover:shadow-lg transition-shadow duration-300" data-aos="fade-up" data-aos-delay="200">
-                <h3 class="text-lg font-semibold mb-4">Key Skills</h3>
-                <ul class="space-y-2 text-sm opacity-80">
-                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-beige-800 rounded-full mr-2"></span>Communication</li>
-                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-beige-800 rounded-full mr-2"></span>Leadership</li>
-                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-beige-800 rounded-full mr-2"></span>Problem-Solving</li>
-                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-beige-800 rounded-full mr-2"></span>Adaptability</li>
+            <div class="md:col-span-2 order-1 md:order-2 flex justify-center" data-aos="zoom-in" data-aos-duration="900" data-aos-delay="150">
+                <div class="relative mx-auto">
+                    <div class="absolute -inset-3 sm:-inset-4 bg-gradient-to-br from-rose-200 to-sage-200 rounded-[2.5rem] rotate-6 opacity-70"></div>
+                    <img src="assets/profile.jpg" alt="Portrait of Nur Nazihah Nabila Binti Roslan"
+                         class="relative w-48 h-48 sm:w-72 sm:h-72 object-cover rounded-[2.2rem] border-4 border-white shadow-soft">
+                    <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 sm:left-auto sm:translate-x-0 -bottom-4 sm:-bottom-5 sm:-left-5 bg-white rounded-2xl shadow-card px-3.5 py-2.5 sm:px-4 sm:py-3 border border-cream-200 whitespace-nowrap">
+                        <p class="text-[0.65rem] sm:text-xs text-ink-500">Bachelor of Business (Hons)</p>
+                        <p class="text-xs sm:text-sm font-semibold text-ink-900">HR Management · UiTM</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About / Profile -->
+        <section id="about" class="pb-16 sm:pb-24" data-aos="fade-up">
+            <div class="grid md:grid-cols-3 gap-4 md:gap-6">
+                <div class="md:col-span-2 bg-white rounded-3xl p-6 sm:p-10 border border-cream-200 shadow-card">
+                    <p class="text-xs uppercase tracking-widest text-rose-400 font-semibold mb-3">Profile</p>
+                    <p class="text-ink-700 leading-relaxed text-[0.98rem] sm:text-[1.05rem]">
+                        Detail-oriented and highly organized Human Resource Management student with hands-on
+                        administrative and operational experience within the public sector. Proven track record in
+                        data integrity, process digitalization, and digital tools management during an internship at
+                        the <span class="text-ink-900 font-medium">Department of Irrigation and Drainage (JPS)</span>.
+                        Adept at bridging the gap between operational workflows and HR administration, with a strong
+                        career focus on <span class="text-rose-500 font-medium">HRIS, compensation, and strategic operations</span>.
+                    </p>
+                </div>
+                <div class="flex flex-row md:flex-col gap-4 md:gap-6">
+                    <div class="bg-ink-900 text-cream-50 rounded-3xl p-5 sm:p-6 flex-1 flex flex-col justify-center">
+                        <p class="text-2xl sm:text-3xl font-serif">3.67</p>
+                        <p class="text-[0.7rem] sm:text-xs text-cream-200/80 mt-1">CGPA · Bachelor &amp; Diploma</p>
+                    </div>
+                    <div class="bg-sage-100 rounded-3xl p-5 sm:p-6 flex-1 flex flex-col justify-center">
+                        <p class="text-2xl sm:text-3xl font-serif text-sage-500">Band 4</p>
+                        <p class="text-[0.7rem] sm:text-xs text-sage-600/80 mt-1">MUET Score</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section id="experience" class="pb-16 sm:pb-24">
+            <h2 class="font-serif text-2xl sm:text-4xl text-ink-900 mb-5 sm:mb-10" data-aos="fade-up">Work Experience</h2>
+
+            <div class="sm:bg-white rounded-3xl p-0 sm:p-10 sm:border sm:border-cream-200 sm:shadow-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-5 sm:mb-6">
+                    <div>
+                        <h3 class="text-lg sm:text-xl font-semibold text-ink-900">Human Resources Intern</h3>
+                        <p class="text-rose-500 font-medium mt-1 text-sm sm:text-base">Jabatan Pengairan dan Saliran (JPS) Negeri Perlis</p>
+                    </div>
+                    <span class="chip bg-rose-50 text-rose-500 border border-rose-200 self-start sm:self-auto">March 2026 — Present</span>
+                </div>
+                <ul class="space-y-3 pl-5 sm:pl-6 border-l-2 border-cream-200">
+                    <li class="relative timeline-dot text-ink-700 leading-relaxed text-[0.92rem] sm:text-base">Managed and updated sensitive operational records and financial tracking data within the BUBPK and Administration units with high accuracy.</li>
+                    <li class="relative timeline-dot text-ink-700 leading-relaxed text-[0.92rem] sm:text-base">Assisted in preparing and processing official administrative correspondence, including Salary Movement Letters, while ensuring strict confidentiality.</li>
+                    <li class="relative timeline-dot text-ink-700 leading-relaxed text-[0.92rem] sm:text-base">Supported the unit in compiling and cross-referencing budgetary data for the Estimated Operating Budget for 2027 framework.</li>
+                    <li class="relative timeline-dot text-ink-700 leading-relaxed text-[0.92rem] sm:text-base">Organized and maintained the department's digital filing system via Google Drive to improve file retrieval and accessibility.</li>
+                    <li class="relative timeline-dot text-ink-700 leading-relaxed text-[0.92rem] sm:text-base">Handled day-to-day office operations, managed incoming documentation, and coordinated communication across internal units.</li>
                 </ul>
             </div>
+        </section>
 
-            <div class="bg-white rounded-3xl p-6 border border-beige-200 flex flex-col justify-center" data-aos="fade-up" data-aos-delay="300">
-                <h3 class="text-lg font-semibold mb-3">Languages</h3>
-                <div class="space-y-2 text-sm">
-                    <div class="flex justify-between items-center">
-                        <span>English</span>
-                        <span class="text-xs bg-beige-100 px-2 py-1 rounded">Fluent</span>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <span>Malay</span>
-                        <span class="text-xs bg-beige-100 px-2 py-1 rounded">Native</span>
+        <!-- Skills -->
+        <section id="skills" class="pb-16 sm:pb-24">
+            <h2 class="font-serif text-2xl sm:text-4xl text-ink-900 mb-5 sm:mb-10" data-aos="fade-up">Skills &amp; Tools</h2>
+
+            <div class="grid md:grid-cols-3 gap-4 md:gap-6">
+                <div class="bg-white rounded-3xl p-6 sm:p-7 border border-cream-200 shadow-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="font-semibold text-ink-900 mb-4">Core HR Competencies</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="chip bg-rose-50 text-rose-600">Compensation &amp; Benefits</span>
+                        <span class="chip bg-rose-50 text-rose-600">Data Migration &amp; Reconciliation</span>
+                        <span class="chip bg-rose-50 text-rose-600">HR Operations</span>
+                        <span class="chip bg-rose-50 text-rose-600">Public Sector Operations</span>
+                        <span class="chip bg-rose-50 text-rose-600">Procurement Workflows</span>
                     </div>
                 </div>
-                <div class="mt-4 pt-4 border-t border-beige-200">
-                    <p class="text-xs text-beige-600">MUET: Band 4</p>
-                </div>
-            </div>
-
-            <div class="md:col-span-1 lg:row-span-2 bg-beige-800 text-beige-50 rounded-3xl p-8 flex flex-col justify-between group" data-aos="fade-up" data-aos-delay="400">
-                <div>
-                    <h3 class="text-xl font-serif mb-6">Education</h3>
-                    <div class="space-y-6">
-                        <div>
-                            <h4 class="font-semibold text-beige-100">Bachelor of Business</h4>
-                            <p class="text-sm text-beige-300 mt-1">Human Resource Management (Honours)</p>
-                            <p class="text-xs text-beige-400 mt-1">UiTM Cawangan Arau, Perlis</p>
-                            <p class="text-xs text-beige-400">March 2024 - Present</p>
-                            <p class="text-sm text-beige-200 mt-2 font-medium">CGPA: 3.61</p>
-                        </div>
-                        <div class="pt-4 border-t border-beige-600">
-                            <h4 class="font-semibold text-beige-100">Diploma in Business Studies</h4>
-                            <p class="text-xs text-beige-400 mt-1">UiTM Cawangan Merbok, Kedah</p>
-                            <p class="text-xs text-beige-400">October 2021 - February 2024</p>
-                            <p class="text-sm text-beige-200 mt-2 font-medium">CGPA: 3.67</p>
-                        </div>
+                <div class="bg-white rounded-3xl p-6 sm:p-7 border border-cream-200 shadow-card" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="font-semibold text-ink-900 mb-4">Digital &amp; HRIS Tools</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="chip bg-sage-100 text-sage-600">PayrollPanda</span>
+                        <span class="chip bg-sage-100 text-sage-600">Jibble</span>
+                        <span class="chip bg-sage-100 text-sage-600">Google Workspace</span>
+                        <span class="chip bg-sage-100 text-sage-600">Microsoft Office</span>
+                        <span class="chip bg-sage-100 text-sage-600">Canva</span>
                     </div>
                 </div>
-            </div>
-
-            <div class="md:col-span-2 bg-white rounded-3xl p-8 border border-beige-200" id="about" data-aos="fade-up" data-aos-delay="500">
-                <h3 class="text-xl font-serif mb-4">Awards & Co-curricular</h3>
-                <div class="space-y-3 text-sm">
-                    <div class="flex items-start">
-                        <span class="w-1.5 h-1.5 bg-beige-800 rounded-full mr-3 mt-2 flex-shrink-0"></span>
-                        <div>
-                            <p class="font-semibold">Vice Chancellor's Award</p>
-                            <p class="text-xs text-beige-600">April 2024</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start">
-                        <span class="w-1.5 h-1.5 bg-beige-800 rounded-full mr-3 mt-2 flex-shrink-0"></span>
-                        <div>
-                            <p class="font-semibold">International Competition of Entrepreneurship Business Innovation (iCEBIV)</p>
-                            <p class="text-xs text-beige-600">September 2023</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start">
-                        <span class="w-1.5 h-1.5 bg-beige-800 rounded-full mr-3 mt-2 flex-shrink-0"></span>
-                        <div>
-                            <p class="font-semibold">Participant, SULAM Program</p>
-                            <p class="text-xs text-beige-600">December 2022</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start">
-                        <span class="w-1.5 h-1.5 bg-beige-800 rounded-full mr-3 mt-2 flex-shrink-0"></span>
-                        <div>
-                            <p class="font-semibold">Certificate of Appreciation (Mentor of MAT112)</p>
-                            <p class="text-xs text-beige-600">December 2021</p>
-                        </div>
+                <div class="bg-white rounded-3xl p-6 sm:p-7 border border-cream-200 shadow-card" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="font-semibold text-ink-900 mb-4">Soft Skills</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="chip bg-cream-200 text-ink-700">Analytical Thinking</span>
+                        <span class="chip bg-cream-200 text-ink-700">Cross-Functional Collaboration</span>
+                        <span class="chip bg-cream-200 text-ink-700">Professional Communication</span>
+                        <span class="chip bg-cream-200 text-ink-700">Data Integrity</span>
+                        <span class="chip bg-cream-200 text-ink-700">Problem-Solving</span>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="bg-beige-200 rounded-3xl p-6 flex flex-col justify-between hover:bg-beige-300 transition-colors" data-aos="fade-up" data-aos-delay="600">
-                <div class="text-3xl mb-4">📞</div>
-                <div>
-                    <h3 class="font-semibold mb-3">Contact</h3>
-                    <p class="text-xs mb-1">📧 nazihahroslan267@gmail.com</p>
-                    <p class="text-xs mb-1">📱 011-11465803</p>
-                    <p class="text-xs">📍 Kangar, Perlis</p>
+        <!-- Education -->
+        <section id="education" class="pb-16 sm:pb-24">
+            <h2 class="font-serif text-2xl sm:text-4xl text-ink-900 mb-5 sm:mb-10" data-aos="fade-up">Education</h2>
+            <div class="grid md:grid-cols-2 gap-4 md:gap-6">
+                <div class="bg-ink-900 text-cream-50 rounded-3xl p-6 sm:p-8" data-aos="fade-up" data-aos-delay="100">
+                    <span class="chip bg-rose-400/20 text-rose-200 mb-4">In Progress</span>
+                    <h3 class="font-serif text-lg sm:text-xl mt-2">Bachelor of Business in Human Resource Management (Honours)</h3>
+                    <p class="text-cream-200/80 text-sm mt-2">UiTM Cawangan Perlis, Kampus Arau</p>
+                    <p class="text-cream-200/60 text-xs mt-1">March 2024 — Present</p>
+                    <p class="mt-4 text-lg font-serif text-rose-200">CGPA 3.67</p>
+                </div>
+                <div class="bg-white rounded-3xl p-6 sm:p-8 border border-cream-200 shadow-card" data-aos="fade-up" data-aos-delay="200">
+                    <span class="chip bg-sage-100 text-sage-600 mb-4">Completed</span>
+                    <h3 class="font-serif text-lg sm:text-xl mt-2 text-ink-900">Diploma in Business Studies</h3>
+                    <p class="text-ink-600 text-sm mt-2">UiTM Cawangan Kedah, Kampus Merbok</p>
+                    <p class="text-ink-400 text-xs mt-1">October 2021 — February 2024</p>
+                    <p class="mt-4 text-lg font-serif text-sage-500">CGPA 3.67</p>
                 </div>
             </div>
+        </section>
 
-            <div class="md:col-span-2 lg:col-span-1 bg-white rounded-3xl p-6 border border-beige-200" data-aos="fade-up" data-aos-delay="700">
-                <h3 class="text-lg font-semibold mb-3">Software Proficiency</h3>
-                <div class="grid grid-cols-2 gap-2 text-sm">
-                    <div class="bg-beige-50 px-3 py-2 rounded-lg">
-                        <p class="font-medium">Word</p>
-                        <p class="text-xs text-beige-600">Intermediate</p>
+        <!-- Awards -->
+        <section id="awards" class="pb-16 sm:pb-24">
+            <h2 class="font-serif text-2xl sm:text-4xl text-ink-900 mb-5 sm:mb-10" data-aos="fade-up">Awards &amp; Co-curricular</h2>
+            <div class="sm:bg-white rounded-3xl p-0 sm:p-10 sm:border sm:border-cream-200 sm:shadow-card grid sm:grid-cols-2 gap-x-8 gap-y-5" data-aos="fade-up" data-aos-delay="100">
+                <div class="flex items-start gap-3">
+                    <span class="text-xl">🏆</span>
+                    <div>
+                        <p class="font-semibold text-ink-900 text-[0.95rem] sm:text-base">Vice Chancellor's Award</p>
+                        <p class="text-xs text-ink-500 mt-0.5">April 2024</p>
                     </div>
-                    <div class="bg-beige-50 px-3 py-2 rounded-lg">
-                        <p class="font-medium">Excel</p>
-                        <p class="text-xs text-beige-600">Basic</p>
+                </div>
+                <div class="flex items-start gap-3">
+                    <span class="text-xl">💡</span>
+                    <div>
+                        <p class="font-semibold text-ink-900 text-[0.95rem] sm:text-base">iCEBIV</p>
+                        <p class="text-xs text-ink-500 mt-0.5">International Competition of Entrepreneurship Business Innovation</p>
+                        <p class="text-xs text-ink-400 mt-0.5">September 2023</p>
                     </div>
-                    <div class="bg-beige-50 px-3 py-2 rounded-lg">
-                        <p class="font-medium">CapCut</p>
-                        <p class="text-xs text-beige-600">Intermediate</p>
+                </div>
+                <div class="flex items-start gap-3">
+                    <span class="text-xl">🤝</span>
+                    <div>
+                        <p class="font-semibold text-ink-900 text-[0.95rem] sm:text-base">Participant, SULAM Program</p>
+                        <p class="text-xs text-ink-500 mt-0.5">December 2022</p>
                     </div>
-                    <div class="bg-beige-50 px-3 py-2 rounded-lg">
-                        <p class="font-medium">Canva</p>
-                        <p class="text-xs text-beige-600">Intermediate</p>
+                </div>
+                <div class="flex items-start gap-3">
+                    <span class="text-xl">📜</span>
+                    <div>
+                        <p class="font-semibold text-ink-900 text-[0.95rem] sm:text-base">Mentor of MAT112</p>
+                        <p class="text-xs text-ink-500 mt-0.5">Certificate of Appreciation · December 2021</p>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="md:col-span-2 bg-beige-100 rounded-3xl p-6 border border-beige-200" data-aos="fade-up" data-aos-delay="800">
-                <h3 class="text-lg font-semibold mb-3">Reference</h3>
-                <div class="text-sm">
-                    <p class="font-semibold">Dr. Mohd Imran Khusairi bin Shafee</p>
-                    <p class="text-beige-700 mt-1">Senior Lecturer</p>
-                    <p class="text-beige-700">Faculty of Business and Management</p>
-                    <p class="text-beige-700">Universiti Teknologi MARA (UiTM) Cawangan Perlis, Kampus Arau</p>
-                    <div class="mt-3 space-y-1">
-                        <p class="text-xs">📱 017-4601957</p>
-                        <p class="text-xs">📧 imrankhusairi@uitm.edu.my</p>
+        <!-- Contact + Reference -->
+        <section id="contact" class="pb-14 sm:pb-20">
+            <h2 class="font-serif text-2xl sm:text-4xl text-ink-900 mb-5 sm:mb-10" data-aos="fade-up">Get in Touch</h2>
+            <div class="grid md:grid-cols-2 gap-4 md:gap-6">
+
+                <div class="bg-gradient-to-br from-rose-400 to-rose-500 text-white rounded-3xl p-6 sm:p-10" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="font-serif text-xl sm:text-2xl mb-5 sm:mb-6">Contact</h3>
+                    <div class="space-y-4 text-sm">
+                        <a href="mailto:nazihahroslan267@gmail.com" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
+                            <span class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">📧</span>
+                            nazihahroslan267@gmail.com
+                        </a>
+                        <a href="tel:+60111146583" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
+                            <span class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">📱</span>
+                            011-11465803
+                        </a>
+                        <a href="https://linkedin.com/in/nazihah-roslan-89b849402" target="_blank" rel="noopener" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
+                            <span class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">🔗</span>
+                            linkedin.com/in/nazihah-roslan-89b849402
+                        </a>
+                        <div class="flex items-center gap-3">
+                            <span class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">📍</span>
+                            Kangar, Perlis, Malaysia
+                        </div>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-white/25 flex gap-4 text-xs text-white/85">
+                        <span>English — Fluent</span>
+                        <span>·</span>
+                        <span>Malay — Native</span>
                     </div>
                 </div>
+
+                <div class="bg-white rounded-3xl p-6 sm:p-10 border border-cream-200 shadow-card" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="font-serif text-xl sm:text-2xl mb-5 sm:mb-6 text-ink-900">Reference</h3>
+                    <p class="font-semibold text-ink-900">Dr. Farah Lina Binti Azizan</p>
+                    <p class="text-ink-600 text-sm mt-1">Lecturer, Faculty of Business and Management</p>
+                    <p class="text-ink-600 text-sm">Universiti Teknologi MARA (UiTM) Cawangan Perlis, Kampus Arau</p>
+                    <div class="mt-5 space-y-2 text-sm">
+                        <p class="flex items-center gap-2 text-ink-700">📱 013-4199577</p>
+                        <p class="flex items-center gap-2 text-ink-700">📧 farahlina@uitm.edu.my</p>
+                    </div>
+                </div>
+
             </div>
+        </section>
 
-        </div>
-
-        <footer class="mt-20 text-center text-beige-800/40 text-sm" data-aos="fade-in">
-            <p>&copy; 2025 Nur Nazihah Nabila Binti Roslan. Crafted with Tailwind & AOS.</p>
-            <p class="text-xs mt-1 opacity-60">Developed by <a href="https://hazeeq.org" target="_blank" class="hover:opacity-100 transition-opacity">hazeeq.org</a></p>
+        <footer class="pb-4 sm:pb-14 text-center text-ink-400 text-sm" data-aos="fade-in">
+            <p>&copy; 2026 Nur Nazihah Nabila Binti Roslan.</p>
+            <p class="text-xs mt-1 opacity-70">Developed by <a href="https://hazeeq.org" target="_blank" class="hover:text-rose-400 transition-colors">hazeeq.org</a></p>
         </footer>
 
     </main>
@@ -232,11 +423,30 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({
-            once: true, // Animation happens only once
-            offset: 50, // Trigger offset
-            duration: 800, // Duration in ms
+            once: true,
+            offset: 40,
+            duration: 700,
             easing: 'ease-out-cubic',
         });
+
+        // Scrollspy for the mobile tab bar
+        (function () {
+            const tabs = document.querySelectorAll('.tab-item');
+            const sections = Array.from(tabs).map(t => document.getElementById(t.dataset.tab)).filter(Boolean);
+            if (!sections.length) return;
+
+            const setActive = (id) => {
+                tabs.forEach(t => t.classList.toggle('active', t.dataset.tab === id));
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) setActive(entry.target.id);
+                });
+            }, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
+
+            sections.forEach(sec => observer.observe(sec));
+        })();
     </script>
 </body>
 </html>

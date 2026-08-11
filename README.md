@@ -1,138 +1,74 @@
 # Nazihah Portfolio
 
-A minimalist portfolio website featuring a clean, modern design with smooth animations and a beige aesthetic. Built with Tailwind CSS and AOS (Animate On Scroll) library.
+A soft, modern pastel portfolio site for Nur Nazihah Nabila Binti Roslan — Human Resource
+Management student and HR intern at Jabatan Pengairan dan Saliran (JPS) Negeri Perlis. Built as a
+single static HTML page with Tailwind CSS and AOS (Animate On Scroll).
+
+Live at [nazihah.site](https://www.nazihah.site).
 
 ## ✨ Features
 
-- **Minimalist Design**: Clean beige color palette with elegant typography
-- **Responsive Layout**: Fully responsive grid system that works on all devices
-- **Smooth Animations**: Scroll-based animations using AOS library
-- **Modern UI Components**: 
-  - Fixed floating navigation bar
-  - Bento-style grid layout
-  - Interactive hover effects
-  - Custom scrollbar styling
-- **Typography**: Combination of Inter and Playfair Display fonts
-- **Sections**:
-  - Hero section with introduction
-  - Featured project showcase
-  - Expertise highlights
-  - Availability status
-  - Project portfolio
-  - About section
-  - Contact information
+- **Soft modern pastel design**: warm cream background, rose + sage accent palette, Fraunces
+  serif headings paired with Plus Jakarta Sans body text
+- **Responsive, card-light layout**: sections that don't need a card (like Work Experience and
+  Awards) skip the boxed treatment on mobile so content has room to breathe
+- **Apple-style bottom tab bar on mobile**: floating pill navigation with icons, active-section
+  highlighting via `IntersectionObserver`, and safe-area padding for notched devices
+- **Full sections**: Hero/profile photo, About/Profile summary, Work Experience, Skills & Tools,
+  Education, Awards & Co-curricular, Contact + Reference
+- **SEO/link-preview ready**: canonical URL, Open Graph + Twitter Card meta tags, favicon and
+  apple-touch-icon
 
 ## 🚀 Getting Started
 
-### Prerequisites
+No build tools required — this is a static HTML site.
 
-- A modern web browser (Chrome, Firefox, Safari, Edge)
-- No build tools required - this is a static HTML site
-
-### Installation
-
-1. Clone the repository:
 ```bash
 git clone https://github.com/HazeeqHaikal/nazihah_portfolio.git
-```
-
-2. Navigate to the project directory:
-```bash
 cd nazihah_portfolio
+python3 -m http.server 8000
 ```
 
-3. Open `index.html` in your browser:
-   - Double-click the file, or
-   - Use a local server (recommended):
-   ```bash
-   # Using Python 3
-   python -m http.server 8000
-   
-   # Using Node.js (with http-server)
-   npx http-server
-   ```
-
-4. Visit `http://localhost:8000` in your browser
+Visit `http://localhost:8000` in your browser.
 
 ## 🎨 Customization
 
 ### Colors
 
-The color scheme is defined in the Tailwind config within `index.html`. Modify the beige palette to match your preferences:
+The palette is defined in the Tailwind config inside `index.html`:
 
 ```javascript
 colors: {
-    beige: {
-        50: '#FDFBF7',  // Main background
-        100: '#F5F2EB', // Secondary background
-        200: '#EBE5DA', // Borders/Accents
-        // ... more shades
-    }
+    cream: { 50: '#FFFDFB', 100: '#FBF6EF', 200: '#F3E9DD', 300: '#E7D8C4' },
+    rose:  { 50: '#FDF3F0', 400: '#DE8770', 500: '#C96C54' },
+    sage:  { 50: '#F4F7F0', 400: '#8FB275', 500: '#729657' },
+    ink:   { 900: '#2C2621', 700: '#544A3F', 500: '#7C7266' },
 }
 ```
 
 ### Content
 
-Update the following sections in `index.html`:
-- **Name**: Search for "Alex Morgan" and replace with your name
-- **Bio**: Update the introduction text
-- **Projects**: Replace project descriptions and images
-- **Expertise**: Modify the skills list
-- **Contact**: Update email and social links
-
-### Fonts
-
-Currently using:
-- **Sans-serif**: Inter (body text)
-- **Serif**: Playfair Display (headings)
-
-Change fonts by modifying the Google Fonts link and Tailwind font configuration.
+All content (profile, experience, skills, education, awards, contact, reference) lives directly in
+`index.html`. The profile photo is at `assets/profile.jpg`.
 
 ## 📦 Dependencies
 
-All dependencies are loaded via CDN:
-- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
-- [AOS](https://michalsnik.github.io/aos/) - Animate On Scroll library
-- [Google Fonts](https://fonts.google.com/) - Inter & Playfair Display
+All loaded via CDN — no npm install needed:
 
-## 🌐 Browser Support
+- [Tailwind CSS](https://tailwindcss.com/) — utility-first CSS framework
+- [AOS](https://michalsnik.github.io/aos/) — animate-on-scroll library
+- [Google Fonts](https://fonts.google.com/) — Fraunces & Plus Jakarta Sans
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
+## 🌐 Hosting
+
+Served via GitHub Pages with a custom domain (`CNAME` → `www.nazihah.site`). Pushing to `main`
+redeploys automatically.
 
 ## 📝 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+MIT — see [LICENSE](LICENSE).
 
 ## 👤 Author
 
-**Nazihah**
-
-- GitHub: [@HazeeqHaikal](https://github.com/HazeeqHaikal)
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome!
-
-1. Fork the project
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📸 Screenshots
-
-_Add screenshots of your portfolio here_
-
-## 🙏 Acknowledgments
-
-- Design inspiration from minimalist portfolio trends
-- Icons from SVG libraries
-- Tailwind CSS for rapid styling
-- AOS library for smooth animations
-
----
-
-Made with ❤️ and minimal design principles
+**Nazihah** — content and profile owner
+Site built &amp; maintained by [hazeeq.org](https://hazeeq.org) ([@HazeeqHaikal](https://github.com/HazeeqHaikal))
